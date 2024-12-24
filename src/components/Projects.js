@@ -12,7 +12,7 @@ const Projects = () => {
                 <div 
                 key={project.id} 
                 className=" bg-black rounded-xl overflow-hidden group">
-                    <div className=" w-[24rem] h-[22rem] relative">
+                    <div className=" sm:w-[24rem] w-auto h-[22rem] relative">
                         <img src={project.image} alt="pic" className="h-5/6 w-full rounded-t-xl object-cover transition-transform"/>
                         <h4 className="text-2xl font-bold my-3 text-white text-center">{project.name}</h4>
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-4">

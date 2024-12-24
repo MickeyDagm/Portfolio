@@ -7,7 +7,7 @@ const Footer = () => {
           <h4 className="text-white font-bold text-2xl tracking-wide ">
             SOCIAL
           </h4>
-          <div className='mt-5 flex  gap-4 text-white'>
+          <div className='mt-5 flex gap-4 text-white sm:flex-row flex-col'>
               <a href='dagmmike1224@gmail.com' target='_blank' rel='noreferrer'>
                 <div className="flex items-center space-x-2">
                   <FaEnvelope className="text-white w-5 h-5" /> 
