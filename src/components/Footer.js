@@ -17,7 +17,7 @@ const Footer = () => {
               <a href='phone' target='_blank' rel='noreferrer'>
                 <div className="flex items-center space-x-2">
                   <FaPhone className="text-white w-5 h-5" />
-                  <span>+251966930056</span>
+                  <span>+251-966930056</span>
                 </div>  
               </a>
               <a href='https://github.com/MickeyDagm' target='_blank' rel='noreferrer'>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
       <hr className='text-slate-50 opacity-30 px-7'/>
       <div>
-        <p className=' py-2 text-sm leading-7 text-[#eee] text-center'>© Copyright 2024. Made by <p  className='underline'>Dagmawi</p></p>
+        <p className=' py-2 text-sm leading-7 text-[#eee] text-center'>© Copyright 2024. Made by <p  className='italic ml-2'>Dagmawi</p></p>
       </div>
     </div>
   );

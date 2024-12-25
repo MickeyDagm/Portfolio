@@ -60,15 +60,16 @@ const Home = () => {
             </a>
           </div>
           <div className="flex justify-center">
-            <button className="px-6 py-3 flex items-center justify-center rounded-full relative overflow-hidden bg-gray-950  shadow-md shadow-blue-600  group transition-all duration-500 ">
-              <Link to='contact'
+          <Link to='contact'
               activeClass="active"
               smooth={true}
               spy={true}
-              offset={-100}
-              className="text-white text-xl fill-white z-10">Contact</Link>
+              offset={-100}>
+            <button className="px-6 py-3 flex items-center justify-center rounded-full relative overflow-hidden bg-gray-950  shadow-md shadow-blue-600  group transition-all duration-500 ">
+              <span className="text-white text-xl fill-white z-10">Contact</span>
             <div className="absolute top-full  w-full h-full rounded-full bg-blue-600 z-0 transition-all duration-500 group-hover:top-0"></div>
           </button>  
+          </Link>
           </div>
               
         </div>

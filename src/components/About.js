@@ -4,7 +4,7 @@ import skills from '../skills.js'
 
 const About = () => {
     return (
-        <div className='mx-auto md:py-8 px-7 bg-gray-950 pb-8  h-auto' id='about'>
+        <div className='mx-auto py-8 px-7 bg-gray-950 pb-8  h-auto' id='about'>
             <div className="mb-7">
             <Headline title={"ABOUT ME"} subtitle={"Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology"}/>
             </div>

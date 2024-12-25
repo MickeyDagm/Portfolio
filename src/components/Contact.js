@@ -57,7 +57,7 @@ const Contact = () => {
                 <div className="flex gap-4 items-center flex-col mb-2 w-full">
                 <input
                     type="text"
-                    name="name"
+                    name="fname"
                     id="name"
                     placeholder="First Name"
                     className="p-3 shadow-blue-600 border border-blue-500 rounded-lg w-full outline-blue-700 outline-1 bg-gray-900"
@@ -65,7 +65,7 @@ const Contact = () => {
                   /> 
                   <input
                     type="text"
-                    name="name"
+                    name="lname"
                     id="name"
                     placeholder="Last Name"
                     className="p-3 shadow-blue-600 border border-blue-500 rounded-lg w-full outline-blue-700 outline-1 bg-gray-900"
@@ -80,9 +80,9 @@ const Contact = () => {
                     onChange={(e)=>setEmail(e.target.value)}
                   />
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
+                    type="tel"
+                    name="tel"
+                    id="tel"
                     placeholder="Phone Number"
                     className="p-3 shadow-blue-600 border border-blue-500 rounded-lg w-full outline-blue-700 outline-1 bg-gray-900"
                     onChange={(e)=>setPhone(e.target.value)}
@@ -102,7 +102,7 @@ const Contact = () => {
                     Submit
                   </button>  
                   {
-                    error && <span className="text-red-800 text-center mb-3 text-base ">{error}</span>
+                    error && <span className="text-red-700 text-center mb-3 text-base ">{error}</span>
                   }
                 </div>
               </div>

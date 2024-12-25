@@ -53,6 +53,7 @@ import {
                     transition: 'all 0.3s ease-in-out'
                   }}                                 
                  className="text-white hover:text-blue-500 duration-500"
+                 onClick={() => setOpen(!open)}
                 >
                   {link.name}
                 </Link>
