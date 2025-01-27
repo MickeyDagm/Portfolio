@@ -4,8 +4,7 @@ import Headline from "../shared/Headline";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
-const GITHUB_USERNAME = "MickeyDagm"; 
-const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`; 
+const API_URL = `https://api.github.com/users/MickeyDagm/repos?sort=updated&per_page=6`; 
 
 const Repositories = () => {
   const [repos, setRepos] = useState([]);

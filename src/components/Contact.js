@@ -1,7 +1,7 @@
 import Headline from "../shared/Headline";
 import { useState } from "react";
-import axios from "axios";
 import { FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -9,48 +9,69 @@ const Contact = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState({});
   const [success, setSuccess] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError("");
+    setError({});
     setSuccess("");
 
-    if (!firstName || !lastName) {
-      setError("You didn't provide your name.");
-      return;
-    }
-    if (!email) {
-      setError("You didn't provide an email.");
-      return;
-    }
+    const errors = {};
+
+
+    const nameRegex = /^[a-zA-Z]+$/; 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError("Invalid email format.");
-      return;
+
+    if (!firstName) {
+      errors.firstName = "First name is required.";
+    } else if (!nameRegex.test(firstName)) {
+      errors.firstName = "First name can only contain letters.";
     }
+
+    if (!lastName) {
+      errors.lastName = "Last name is required.";
+    } else if (!nameRegex.test(lastName)) {
+      errors.lastName = "Last name can only contain letters.";
+    }
+
+    if (!email) {
+      errors.email = "Email is required.";
+    } else if (!emailRegex.test(email)) {
+      errors.email = "Invalid email format.";
+    }
+
     if (!phone) {
-      setError("You didn't provide a phone number.");
-      return;
+      errors.phone = "Phone number is required.";
     }
+
     if (!message) {
-      setError("You didn't provide a message.");
-      return;
+      errors.message = "Message is required.";
+    } else if (message.split(" ").length > 500) {
+      errors.message = "Message exceeds the 500-word limit.";
     }
-    if (message.split(" ").length > 500) {
-      setError("Message exceeds the 500-word limit.");
+
+    if (Object.keys(errors).length > 0) {
+      setError(errors);
       return;
     }
 
-    axios
-      .post("", {
-        email,
-        text: message,
-        firstName,
-        lastName,
-        phone,
-      })
+    const templateParams = {
+      from_email: email,
+      to_name: "Dagmawi Ephrem", 
+      firstName,
+      lastName,
+      phone,
+      message,
+    };
+
+    emailjs
+      .send(
+        "service_oqxbeqa", 
+        "template_4jtgh5s",
+        templateParams,
+        "YScyqLRJxdFCfROZQ"
+      )
       .then(() => {
         setSuccess("Message sent successfully!");
         setEmail("");
@@ -60,7 +81,7 @@ const Contact = () => {
         setPhone("");
       })
       .catch((err) => {
-        setError("Failed to send message. Please try again.");
+        setError({ global: "Failed to send message. Please try again." });
         console.error(err);
       });
   };
@@ -86,6 +107,10 @@ const Contact = () => {
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
+              {error.firstName && (
+                <span className="text-red-700 text-sm">{error.firstName}</span>
+              )}
+
               <input
                 type="text"
                 name="lname"
@@ -94,6 +119,10 @@ const Contact = () => {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
+              {error.lastName && (
+                <span className="text-red-700 text-sm">{error.lastName}</span>
+              )}
+
               <input
                 type="email"
                 name="email"
@@ -102,6 +131,10 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {error.email && (
+                <span className="text-red-700 text-sm">{error.email}</span>
+              )}
+
               <input
                 type="tel"
                 name="tel"
@@ -110,6 +143,9 @@ const Contact = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
+              {error.phone && (
+                <span className="text-red-700 text-sm">{error.phone}</span>
+              )}
             </div>
 
             <div className="flex gap-4 flex-col items-center mb-2 w-full">
@@ -121,12 +157,17 @@ const Contact = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
+              {error.message && (
+                <span className="text-red-700 text-sm">{error.message}</span>
+              )}
+
               <button className="w-5/6 px-6 py-3 flex items-center justify-center rounded-full relative overflow-hidden bg-blue-600 hover:bg-blue-700">
                 Submit
               </button>
-              {error && (
+
+              {error.global && (
                 <span className="text-red-700 text-center mb-3 text-base">
-                  {error}
+                  {error.global}
                 </span>
               )}
               {success && (
@@ -137,7 +178,6 @@ const Contact = () => {
             </div>
           </div>
         </form>
-
         <div className="flex justify-center gap-5 ">
 
           <a
