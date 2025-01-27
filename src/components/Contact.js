@@ -66,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-6 dark:bg-gray-950 bg-gray-100 h-auto pt-8 " id="contact">
+    <div className="px-6 dark:bg-gray-950 bg-gray-100 h-auto pt-12 " id="contact">
       <Headline
         title={"CONTACT"}
         subtitle={

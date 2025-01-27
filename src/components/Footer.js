@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
       <hr className='text-slate-50 opacity-30 px-7'/>
       <div>
-        <p className=' py-2 text-sm leading-7 text-[#eee] text-center'>© Copyright 2024. Made by <p  className='italic ml-2'>Dagmawi</p></p>
+        <p className=' py-2 text-sm leading-7 text-[#eee] text-center'>© Copyright 2025. Made by <p  className='italic ml-2'>Dagmawi</p></p>
       </div>
     </div>
   );

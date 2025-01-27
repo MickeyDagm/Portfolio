@@ -23,7 +23,7 @@ const Projects = () => {
 
   return (
     <div>
-    <div className="py-8 px-7 dark:bg-gray-950 bg-gray-100 h-auto" id="projects">
+    <div className="pt-12 px-7 dark:bg-gray-950 bg-gray-100 h-auto" id="projects">
       <Headline
         title={"PROJECTS"}
         subtitle={
