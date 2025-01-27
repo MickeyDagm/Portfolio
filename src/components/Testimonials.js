@@ -15,6 +15,7 @@ const Testimonials = () => {
         subtitle="Here are some words from clients and partners we've worked with."
       />
       <Swiper
+        loop={true}
         modules={[Pagination, Navigation, Autoplay, EffectFade]}
         spaceBetween={30}
         slidesPerView={1}
@@ -22,7 +23,7 @@ const Testimonials = () => {
         navigation
         effect="fade" 
         autoplay={{
-          delay: 4000,
+          delay: 3000,
           disableOnInteraction: false, 
         }}
         className="my-8"
