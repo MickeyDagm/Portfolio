@@ -56,35 +56,7 @@ const Contact = () => {
       return;
     }
 
-    const templateParams = {
-      from_email: email,
-      to_name: "Dagmawi Ephrem", 
-      firstName,
-      lastName,
-      phone,
-      message,
-    };
-
-    emailjs
-      .send(
-        "service_oqxbeqa", 
-        "template_4jtgh5s",
-        templateParams,
-        "YScyqLRJxdFCfROZQ"
-      )
-      .then(() => {
-        setSuccess("Message sent successfully!");
-        setEmail("");
-        setMessage("");
-        setFirstName("");
-        setLastName("");
-        setPhone("");
-      })
-      .catch((err) => {
-        setError({ global: "Failed to send message. Please try again." });
-        console.error(err);
-      });
-  };
+  
 
   return (
     <div className="px-6 dark:bg-gray-950 bg-gray-100 h-auto pt-12 " id="contact">

@@ -30,7 +30,7 @@ const Projects = () => {
           "Here, you can explore a selection of personal and client projects I’ve worked on, each accompanied by its own case study."
         }
       />
-      <div className="flex items-start flex-wrap justify-center gap-5 my-8">
+      <div className="flex items-start flex-wrap justify-center gap-5 pb-5">
         {projects.map((project) => (
           <motion.div
             variants={fadeIn("up", 0.3)}
