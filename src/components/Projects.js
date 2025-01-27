@@ -27,7 +27,7 @@ const Projects = () => {
       <Headline
         title={"PROJECTS"}
         subtitle={
-          "Here you will find some of the personal and clients projects that I created with each project containing its own case study"
+          "Here, you can explore a selection of personal and client projects I’ve worked on, each accompanied by its own case study."
         }
       />
       <div className="flex items-start flex-wrap justify-center gap-5 my-8">
@@ -65,7 +65,7 @@ const Projects = () => {
                   {project.name}
                 </h4>
                 <div
-                className={`rounded-full flex items-center justify-end pr-3 text-base font-semibold cursor-pointer transition-all duration-200 ease-in-out ${
+                className={`flex items-center justify-end pr-3 text-base font-semibold cursor-pointer transition-all duration-200 ease-in-out ${
                     project.liked ? "text-blue-600" : "text-gray-600"
                 }`}
                 onClick={() => handleLike(project.id)}

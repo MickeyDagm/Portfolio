@@ -70,7 +70,7 @@ const Contact = () => {
       <Headline
         title={"CONTACT"}
         subtitle={
-          "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible"
+          "You can reach out to me by filling out the form below, and I’ll respond as soon as possible."
         }
       />
 

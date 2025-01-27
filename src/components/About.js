@@ -12,10 +12,6 @@ const About = () => {
             <TypeAnimation
               className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-400"
               sequence={[
-                "Designing for the Future, One Website at a Time.",
-                1000,
-                "Designing for the Online Presence.",
-                1000,
                 "Designing for the Pixel Perfect Experiences.",
                 1000,
                 "We Create, You Conquer.",
@@ -26,13 +22,10 @@ const About = () => {
               repeat={Infinity}
             />
             <p className="dark:text-white text-xl my-8">
-              A Web Developer building  Websites
-              and Web Applications that leads to the success of the overall
-              product
+            I’m a passionate developer with a focus on programming, web development, and AI. Currently studying Information Science, I’m always eager to learn new technologies and build innovative projects. My goal is to create impactful solutions and grow as a professional in the tech industry.
             </p>
             <div className="flex justify-center">
-            </div>
-                
+            </div> 
           </div>
           <div className="flex justify-center w-full md:w-auto">
             <img 
