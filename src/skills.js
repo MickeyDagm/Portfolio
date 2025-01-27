@@ -10,5 +10,4 @@ const skills = [
   { id: 9, title: "MySQL", icon: "devicon-mysql-plain colored", level: 60, color: "#4479A1" },
 ];
 
-
 export default skills;

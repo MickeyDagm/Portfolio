@@ -1,5 +1,4 @@
 import { TypeAnimation } from "react-type-animation";
-import { Link } from "react-router-dom";
 import Profile from "../assets/Profile.jpg";
 
 const About = () => {
