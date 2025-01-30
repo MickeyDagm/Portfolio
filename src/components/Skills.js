@@ -10,11 +10,11 @@ const Skills = () =>{
                 <Headline title={"SKILLS"} subtitle={""}/>
                 </div>
                 
-                <div className="flex flex-wrap justify-between gap-6">
+                <div className="flex flex-wrap justify-between gap-6 mx-auto">
             {skills.map((skill) => (
                 <div
                 key={skill.id}
-                className="flex flex-col items-center justify-center gap-3"
+                className="flex flex-col items-center justify-center gap-3 mx-auto"
                 >
 
                 <div className="relative w-24 h-24">
