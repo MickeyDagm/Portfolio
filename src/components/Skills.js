@@ -35,6 +35,7 @@ const Skills = () =>{
                         
                         }}
                     ></i>
+                    {/* {skill.level}% */}
                     </div>
                 </div>
 

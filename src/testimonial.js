@@ -18,6 +18,18 @@ const testimonials = [
       title: 'Just Chill Guy ',
       image: imageLogo, 
     },
+    {
+      id: 4,
+      name: 'Ametelwahid Abdulahi',
+      title: 'AAU Student',
+      image: imageLogo, 
+    },
+    {
+      id: 5,
+      name: 'Flem Berhanu',
+      title: 'AAU Student',
+      image: imageLogo, 
+    },
   ];
 
   export default testimonials;
