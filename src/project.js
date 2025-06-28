@@ -1,6 +1,6 @@
 import bookrec from "../src/assets/bookrec.jpg";
 import explorefact from "../src/assets/explorefact.jpg";
-import recipesHub from "../src/assets/recipesHub.jpg";
+// import recipesHub from "../src/assets/recipesHub.jpg";
 import MDAF from "../src/assets/MDAF.jpg";
 import Moive from "../src/assets/Movie.png";
 import Supermarket from "../src/assets/Supermarket.png";

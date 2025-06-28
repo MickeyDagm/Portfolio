@@ -4,7 +4,7 @@ import { FaExternalLinkAlt, FaGithub, FaThumbsUp } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants.js";
 import { useState } from "react";
-import Repositories from "./Repositories.jsx";
+// import Repositories from "./Repositories.jsx";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);

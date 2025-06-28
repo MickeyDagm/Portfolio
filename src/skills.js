@@ -4,7 +4,7 @@ import {
   // Backend
   SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiLaravel, SiDjango, SiPython,
   // Tools
-  SiGit, SiGithub, SiFirebase, SiVisualstudio
+  SiGit, SiGithub, SiFirebase
 } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 
