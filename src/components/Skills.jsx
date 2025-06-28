@@ -14,7 +14,9 @@ const Skills = () => {
             key={skill.id}
             className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-lg"
           >
-            <i className={`${skill.icon} text-5xl mb-3`}></i>
+            <div className="text-5xl mb-3">
+              {skill.icon} {/* Render the React component directly */}
+            </div>
             <p className="text-center font-medium dark:text-white">{skill.title}</p>
           </div>
         ))}

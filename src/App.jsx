@@ -17,12 +17,15 @@ function App() {
     <Router>
     <div className={darkMode ? "dark" : ""}>
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+      <div className="z-10">
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+          </Routes>
+        <Footer />
+      </div>
+     
     </div>
   </Router>
   );

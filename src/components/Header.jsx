@@ -18,7 +18,7 @@ const Header = ({ toggleDarkMode, darkMode }) => {
       <div className="flex items-center justify-between gap-3 dark:bg-gray-950 bg-gray-100 py-4 md:px-14 px-7 fixed top-0 left-0 right-0">
           <div className="font-bold text-2xl tracking-wide cursor-pointer">
             <Link to="/" className="dark:text-white">
-              Dagmawi <span className="text-blue-500">Ephrem</span>
+              Dagmawi <span className="text-blue-500 text-shadow-[0_35px_35px_rgb(255_0_0_/_0.5)]">Ephrem</span>
             </Link>
           </div>
 
