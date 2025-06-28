@@ -43,7 +43,8 @@ const projects = [
     sourceCodeLink: "https://github.com/MickeyDagm/MovieSearchApp.git",
     likes: 0,
     techStack: [
-      { name: "React", color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300" }
+      { name: "React", color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300" },
+      { name: "Tailwind", color: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300" }
     ]
   },
   {
