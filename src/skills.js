@@ -4,7 +4,7 @@ import {
   // Backend
   SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiLaravel, SiDjango, SiPython,
   // Tools
-  SiGit, SiGithub, SiFirebase
+  SiGit, SiGithub, SiFirebase, SiRust
 } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 
@@ -24,6 +24,7 @@ export const backendSkills = [
     { id: 10, title: 'Laravel', icon: <SiLaravel className="text-[#FF2D20]" /> },
     { id: 11, title: 'Django', icon: <SiDjango className="text-[#092E20]" /> },
     { id: 12, title: 'Python', icon: <SiPython className="text-[#3776AB]" /> },
+    { id: 13, title: 'Rust', icon: <SiRust className="text-[#000000]" /> },
 ];
 
 export const tools = [
